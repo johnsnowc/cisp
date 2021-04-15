@@ -6,30 +6,30 @@ import java.util.List;
 
 public interface UserService {
 
-  /**
-   * 登录校验
-   */
-  User loginCheck(User user);
+    /**
+     * 登录校验
+     */
+    User loginCheck(User user);
 
-  /**
-   * 用户注册
-   */
-  void register(User user);
+    /**
+     * 用户注册
+     */
+    void register(User user);
 
-  /**
-   * 用户名校验
-   */
-  Boolean isUsernameExsit(String username);
+    /**
+     * 用户名校验
+     */
+    Boolean isUsernameExsit(String username);
 
-  User getUserByUsername(String username);
+    User getUserByUsername(String username);
 
-  int countAll(String search);
+    int countAll(String search);
 
-  List<User> getUsers(String search);
+    List<User> getUsers(String search);
 
-  void updateUser(User user);
+    void updateUser(User user);
 
-  User getUserById(Integer id);
+    User getUserById(Integer id);
 
-  void deleteById(Integer id);
+    void deleteById(Integer id);
 }

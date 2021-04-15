@@ -2,17 +2,18 @@ package com.snowc.cisp.service;
 
 import com.snowc.cisp.domain.Comment;
 import com.snowc.cisp.vo.CommentVO;
+
 import java.util.List;
 
 
 public interface CommentService {
 
-  void create(Comment comment);
+    void create(Comment comment);
 
-  List<CommentVO> getCommentByArticleId(Integer articleId);
+    List<CommentVO> getCommentByArticleId(Integer articleId);
 
-  int countAllComment();
+    int countAllComment();
 
-  void delete(Comment comment);
+    void delete(Comment comment);
 
 }

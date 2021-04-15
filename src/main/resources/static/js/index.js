@@ -1,5 +1,5 @@
 //搜素框处理
-$("#Search").click(function(e) {
+$("#Search").click(function (e) {
     layer.open({
         title: false,
         type: 1,
@@ -12,7 +12,7 @@ $("#Search").click(function(e) {
 });
 
 //登录框处理
-$('.subLogin').click(function() {
+$('.subLogin').click(function () {
     layer.open({
         title: "",
         type: 2,
@@ -29,7 +29,7 @@ $('.subLogin').click(function() {
 /*
    注册框处理
 */
-$('#subReg').click(function() {
+$('#subReg').click(function () {
     layer.open({
         title: "",
         type: 2,
@@ -46,24 +46,26 @@ $('#subReg').click(function() {
 * 获取验证码
 * */
 
-$('#code').click(function(){
+$('#code').click(function () {
     $.ajax({
-        url:'/getImage?'+Date.parse(new Date()),
-        type:'get',
-        success:function(data){
-            $('#code').attr('src',this.url);
+        url: '/getImage?' + Date.parse(new Date()),
+        type: 'get',
+        success: function (data) {
+            $('#code').attr('src', this.url);
         }
     });
 })
 
 //获取地址栏函数
-function getQueryVariable(variable){
+function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split("&");
-    for (var i=0;i<vars.length;i++) {
+    for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split("=");
-        if(pair[0] == variable){return pair[1];}
+        if (pair[0] == variable) {
+            return pair[1];
+        }
     }
-    return(false);
+    return (false);
 }
 

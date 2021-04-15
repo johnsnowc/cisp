@@ -13,9 +13,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 public class CispApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(CispApplication.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(CispApplication.class, args);
+    }
 
 //  @Bean
 //  public WebServerFactoryCustomizer<ConfigurableWebServerFactory> webServerFactoryCustomizer() {

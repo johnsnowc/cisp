@@ -3,6 +3,7 @@ package com.snowc.cisp.dao;
 import com.snowc.cisp.domain.Category;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -11,11 +12,11 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface CategoryMapper {
 
-  List<Category> getAllCategory();
+    List<Category> getAllCategory();
 
-  void create(Category category);
+    void create(Category category);
 
-  void deleteById(Integer id);
+    void deleteById(Integer id);
 
-  void updateById(Category category);
+    void updateById(Category category);
 }

@@ -5,6 +5,7 @@ import com.snowc.cisp.vo.ArticleVO;
 
 import java.util.Date;
 import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -14,36 +15,36 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface ArticleMapper {
 
-  void insert(Article article);
+    void insert(Article article);
 
-  List<ArticleVO> getIndexArticles(@Param("page") Integer page);
+    List<ArticleVO> getIndexArticles(@Param("page") Integer page);
 
-  int countIndexArticles();
+    int countIndexArticles();
 
-  ArticleVO getArticleById(Integer id);
+    ArticleVO getArticleById(Integer id);
 
-  List<ArticleVO> getAticlesByUserId(Integer userId);
+    List<ArticleVO> getAticlesByUserId(Integer userId);
 
-  int countAllArticle();
+    int countAllArticle();
 
-  List<ArticleVO> getArticleByCategoryId(Integer categoryId, Integer page);
+    List<ArticleVO> getArticleByCategoryId(Integer categoryId, Integer page);
 
-  int countArticleByCateId();
+    int countArticleByCateId();
 
-  void updateById(Article article);
+    void updateById(Article article);
 
-  void deleteById(Integer id);
+    void deleteById(Integer id);
 
-  void updateTopStatus(Integer id, String top);
+    void updateTopStatus(Integer id, String top);
 
-  List<ArticleVO> getTopArticle();
+    List<ArticleVO> getTopArticle();
 
-  List<ArticleVO> searchArticle(Integer categoryId, String startTime, String endTime,
-    String keyword);
+    List<ArticleVO> searchArticle(Integer categoryId, String startTime, String endTime,
+                                  String keyword);
 
-  List<Article> getHotArticles(@Param("startDate") Date startDate, @Param("endDate") Date endDate);
+    List<Article> getHotArticles(@Param("startDate") Date startDate, @Param("endDate") Date endDate);
 
-  void addComment(Integer id);
+    void addComment(Integer id);
 
-  void deleteComment(Integer id);
+    void deleteComment(Integer id);
 }

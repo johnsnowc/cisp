@@ -2,39 +2,41 @@ package com.snowc.cisp.service;
 
 import com.snowc.cisp.domain.Article;
 import com.snowc.cisp.vo.ArticleVO;
+
 import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 
 @Service
 public interface ArticleService {
 
-  void create(Article article);
+    void create(Article article);
 
-  List<ArticleVO> getIndexArticles(Integer page);
+    List<ArticleVO> getIndexArticles(Integer page);
 
-  int countIndexArticles();
+    int countIndexArticles();
 
-  ArticleVO getArticleById(Integer id);
+    ArticleVO getArticleById(Integer id);
 
-  List<ArticleVO> getArticlesByUserId(Integer userId);
+    List<ArticleVO> getArticlesByUserId(Integer userId);
 
-  List<ArticleVO> getArticlesByCategoryId(Integer category, Integer page);
+    List<ArticleVO> getArticlesByCategoryId(Integer category, Integer page);
 
-  int countArticleByCateId();
+    int countArticleByCateId();
 
-  int countAllArticle();
+    int countAllArticle();
 
-  void update(Article article);
+    void update(Article article);
 
-  void delete(Integer id);
+    void delete(Integer id);
 
-  void setTopStatus(Integer id);
+    void setTopStatus(Integer id);
 
-  List<ArticleVO> getTopArticle();
+    List<ArticleVO> getTopArticle();
 
-  List<ArticleVO> searchArticle(Integer categoryId, String startTime, String endTime,
-    String keyword);
+    List<ArticleVO> searchArticle(Integer categoryId, String startTime, String endTime,
+                                  String keyword);
 
-  List<Article> getHotArticles();
+    List<Article> getHotArticles();
 }
